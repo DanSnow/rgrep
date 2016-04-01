@@ -1,0 +1,9 @@
+env = Environment(
+  CXXFLAGS = ['-Wall', '-Wextra', '-std=gnu++14', '-g'],
+  CPPPATH = ['../../librgrep/src'],
+  RPATH = ['../../librgrep/src'],
+  LIBPATH = ['../../librgrep/src'],
+  LIBS = ['rgrep']
+)
+
+env.Program('rgrep', Glob('*.cpp'))
